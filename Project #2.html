@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
+
+        <title>Furniture site</title>
+        <style>    
+        .whole{ 
+            margin-left:60px;
+            margin-right:60px;
+        }    
+            .top{
+                display:flex;
+                       justify-content:space-between;
+                       flex-direction:row;
+                       align-items:center;
+                       width:900px;
+                       height:50px;
+                 
+            }
+
+                
+         
+            .top-img-center,.top-right, .top-left{ 
+             display:flex;
+             flex-direction:row;
+                justify-content:space-between;
+                align-items:center;
+                height:50px;          
+                
+            }
+            
+            .top-l1, .top-l2, .top-l3, .top-l4, .top-l5{
+                font-size:15px;
+               font-family:Raleway;
+                margin-left:10px;
+                margin-right:10px;
+                cursor:pointer;
+                transition:0.15s;
+            }
+            .top-l1:hover{
+                    text-decoration:underline;
+            font-size:20px;
+                color:peru;
+                
+            }
+                .top-l2:hover{        
+                text-decoration:underline;
+            font-size:20px;
+                color:peru;
+                
+            }
+                .top-l3:hover{
+                        text-decoration:underline;
+            font-size:20px;
+                color:peru;
+                
+            }
+                .top-l4:hover{
+                        text-decoration:underline;
+            font-size:20px;
+                color:peru;
+                
+            }
+                .top-l5:hover{
+                        text-decoration:underline;
+            font-size:20px;
+                color:peru;
+                
+            }            
+            .top-r1, .top-r2, .top-r3{
+                font-size:15px;
+               font-family:Raleway;
+                margin-left:10px;
+                margin-right:10px;
+                transition:0.15s;
+            }
+                .top-r1:hover{
+            text-decoration:underline;
+            font-size:20px;
+                color:peru;
+                
+            }
+                .top-r2:hover{
+                          text-decoration:underline;
+            font-size:20px;
+                color:peru;
+                
+            }
+                .top-r3:hover{
+                          text-decoration:underline;
+            font-size:20px;
+                color:peru;
+                
+            }
+            
+            .cart-icon{
+                margin-left:10px;
+                margin-top:4px;
+                width:50px;
+            }
+            
+            .big-img{
+            
+            }
+            .big-img-img{
+             margin-top:10px;
+                width:900px;
+                position:relative;
+            }
+            .pic-txt{
+                position:absolute;
+                width:400px;
+                top:400px; 
+                left:80px;
+            }
+            .big-img-txt{
+            font-family:Raleway;
+            color:silver;
+                line-height:100px;
+                font-size:80px;
+            }
+            .big-img-button{
+                margin-top:50px;
+            }
+            .shop-button{
+            border:none;
+            font-size:30px;
+            text-decoration:none;
+            margin-top:20px;
+            padding-top:20px;
+            padding-bottom:20px;
+            padding-left:35px;
+            padding-right:35px;
+            color:white;
+            cursor:pointer;
+            font-family:Raleway;
+            background-color:rgb(222,194,135);
+                transition: 0.4s;
+            }
+            .shop-button:hover{
+              padding-top:30px;
+            padding-bottom:30px;
+            padding-left:60px;
+            padding-right:60px;
+            font-size:40px;
+            animation:  shake 0.8s  ;
+  
+            }
+            .dnd-img{
+               margin-top:20px;
+                margin-bottom:25px;
+                position:relative;
+               z-index:100px;
+            }
+            .big-img2{
+                width:900px;
+                postion:relative;
+                
+            }
+            .cover-text{
+            display:flex;
+            flex-direction:column;
+                background-color:chocolate;
+                height:480px;
+                width:300px;
+                position:absolute;
+                top:10px;
+                left:150px;
+                padding-top:100px;     
+            }
+            .cover-1,.cover-2,.cover-butt{
+                margin-left:15px;
+            }
+            .cover-1{
+            font-family:Raleway;
+                color:white;
+                font-size:20px;
+                margin-top:70px;
+            }
+            .cover-2{
+            font-family:Raleway;
+            margin-top:15px;
+                color:white;
+                font-size:35px;
+                line-height:60px;
+            }
+            .cover-butt{
+            font-family:Raleway;
+                backgroung-color:silver;
+                padding-top:20px;
+                padding-bottom:20px;
+                padding-left:35px;
+                padding-right:35px;
+                border:none;
+                margin-top:15px;
+                font-size:25px;
+                cursor:pointer;
+            }
+            .mul-img{
+                display:grid;
+                width:900px;
+                grid-template-columns: 400px 400px; 
+                column-gap:60px;
+                row-gap:30px;
+            }
+            .img1-grid{
+                position:relative;
+            z-index:1000px;
+            }
+            .img-1{
+            width:440px;
+            cursor:pointer;
+        
+            }
+            .img1-text-button{
+               background-color:white;
+               border-color:black;
+               font-family:Raleway;
+               font-size:20px;
+                padding-top:20px;
+                padding-bottom:20px;
+                padding-left:35px;
+                padding-right:35px;
+                border:grey;
+                position:absolute;
+                top:200px;
+                left:50px;
+                cursor:pointer;
+                transition: 0.5s;
+            }
+              .img1-grid:hover .img1-text-button{
+              background-color:tomato;
+                  color:white;
+              }
+              
+              .alone-txt-div{
+                  display:flex;
+                  justify-content:center;
+                  align-item:center;
+                  width:900px;
+              }
+              .alone-txt{
+              font-size:40px;
+                  font-family:Raleway;
+                  font-weight:500;
+                  margin-top:20px;         
+                  margin-bottom:20px;         
+              }
+  .img7-grid{
+                  display:grid;
+                  padding-top:20px;
+                  width:900px;
+                  grid-template-columns: 2fr 2fr 2fr; 
+                  row-gap:50px;
+                  margin-top:20px;
+                  border:none;                  
+              }           
+                      .img-7 {
+                  width:250px;
+                  height:250px;
+              }
+              .img7-prop{
+                  display:flex;
+                  flex-direction:column;
+                  align-items:center;      
+              }
+                  .img-2grid{ 
+                  width:250px;
+                  height:330px;
+                  border: 1.5px dotted grey;
+                  padding-left:10px;
+                  padding-top:10px;
+                  padding-right:10px;           
+                 margin-left:10px;
+                 transition:0.25s;
+                 cursor:pointer;
+                 position:relative;
+              }
+              .img-2grid:hover{
+                  box-shadow: 1px 1px 8px grey;
+              }
+              .img-2grid:hover    .img7-name{
+                  color:tomato;
+              }
+              .img-2grid:hover    .img7-price{
+                  color:green;
+              }
+                .img-2grid:hover   .img-7button{
+                  background-color:rgb(100,100,100);
+                    box-shadow: 1px 1px 8px grey;
+              }
+              .img7-name{
+               font-family:Raleway;
+                  margin-top:10px;
+                  margin-bottom:10px;                             
+              }   
+              .img7-price{
+                         font-family:Raleway;
+                  margin-top:10px;
+                  margin-bottom:10px;    
+              }
+              .img7-div-7button{
+                  position:absolute;
+                  bottom:-35px;
+                  left:0;
+              }
+              .img-7button{
+            background:transparent;
+              border:none;
+                  color:white;
+                  font-family:Raleway;
+                  font-size:15px;
+                  width:270px;
+                  padding-top:10px;
+                  padding-bottom:10px;
+                  cursor:pointer;
+                  transition:0.20s;
+              }
+              .discover-button{
+                       display:flex;
+                  justify-content:center;
+                  align-item:center;
+                  width:900px;
+                  margin-top:100px;
+                  margin-bottom:10px;
+                  height:50px;
+              }
+              .button-8{
+              border:none;
+              font-size:20px;
+              color:white;
+              font-family:Raleway;      
+                  background-color:rgb(80,80,80);
+                  padding-top:15px;
+                  padding-bottom:15px;
+                  padding-left:30px;
+                  padding-right:30px;
+                  cursor:pointer;            
+                  transition: opacity 0.15s;              
+              }
+              .button-8:hover{
+                  opacity:0.6;
+              }
+              .alone-txt2{
+                          display:flex;
+                  justify-content:center;
+                  align-item:center;
+                  width:900px;
+                  margin-top:200px;
+                  margin-botton:10px;
+                  font-size:20px;
+                  font-family:Raleway;      
+                  color:rgb(210,30,30);
+                  transition:0.5s;
+              }
+              .alone-txt2:hover{
+                  font-size:25px;
+                  color:tomato;
+              }
+              .alone-txt3{
+                             display:flex;
+                  justify-content:center;
+                  align-item:center;
+                  width:900px;
+                  margin-top:50px;
+                  font-size:25px;        
+                  font-family:Raleway;      
+              }
+              .alone-txt3-link{
+              margin-left:10px;
+                  color:#fc8c03; 
+              }
+              .alone-txt3-link:hover{
+                  text-decoration:underline;
+              }
+              .img-grid3-div{
+              margin-left:-70px; 
+            width:1020px;
+              }
+              .img1-div{
+                  margin-bottom:0;
+              }
+              .img-grid3{
+              display:grid;
+              width:1020px;
+              column-gap:0;
+              row-gap:0;
+             grid-template-columns:1fr 1fr 1fr 1fr 1fr ;
+              margin-top:70px;
+              margin-bottom:70px;
+              }
+              
+              .img1-grid3{
+                  width:204px;
+                  height:270px;
+              }
+              
+              .contact1-div{     
+                  width:900px;  
+              }
+              .email-div{
+                  display:flex;
+                  flex-direction:row;
+                  width:900px;
+                  justify-content:space-between;
+                  padding-bottom:50px;
+              }
+              .sub-txt{
+              width:300px;
+               font-family:Raleway;   
+               line-height:30px;
+               font-size:15px;
+               line-spacing:20px;
+              }
+              .email-box{
+              font-family:Raleway;   
+              background-color:#ebebeb;
+              font-size:15px;
+                  padding-top:15px;
+                  padding-bottom:15px;
+                  padding-left:15px;
+                  padding-right:150px;
+                  border:none;
+              }
+              .placeholder{
+                    font-family:Raleway;   
+                  font-size:15px;
+                  color:black;
+              }
+              .submit-box{
+                       font-family:Raleway;   
+              background-color:#f2c446;
+              font-size:15px;
+              color:white;
+              font-weight:500;
+                  padding-top:15px;
+                  padding-bottom:15px;
+                  padding-left:25px;
+                  padding-right:25px;
+                  border:none;
+                  margin-left:-5px;  
+              }
+              .contact-total{
+                  display:flex;
+                  flex-direction:row;
+              width:900px;
+                  margin-top:50px;
+                
+              }
+              .contact-div{   
+              display:flex;  
+                    width:400px;     
+                  align-items:end;   
+                  margin-bottom:10px;   
+              }
+              
+              .phone-txt{
+                  font-family:Raleway;
+                  margin-top:5px;
+              }
+              .email2-txt{
+                  font-family:Raleway;
+                  margin-top:5px;
+              }
+              .contact-div1{        
+                  display:flex;  
+                  justify-content:space-between;
+                    width:500px;            
+           }
+           .Home-at-bottom{
+               display:flex;
+               flex-direction:column;
+              width:150px;
+           }
+           .Customer-service-div{
+                display:flex;
+               flex-direction:column;
+               width:200px;
+           }
+                .Social-div{
+                display:flex;
+               flex-direction:column;
+               width:150px;
+               }
+               .bottom1-head{
+               font-size:18px;
+                   color:grey;
+                   margin-bottom:10px;
+               }
+               .bottom2{
+                   color:black;
+                   font-size:15px;
+                   font-family:Raleway;
+                   margin-top:5px;
+                   margin-bottom:10px;
+                   font-weight:500;
+                   cursor:pointer;
+               }
+               .bottom2:hover{
+                   color:peru;
+               }
+               .social-icon{
+                      display:flex;
+               flex-direction:row; 
+               margin-top:20px;
+               }
+                           
+              .fa{ 
+                   font-size: 35px;
+                   width: 35px;
+                  text-align: center;
+                  text-decoration: none;
+                  margin: 5px 2px;
+                  color:rgb(44, 48, 47);
+                    }
+               .fa:hover {
+               color:peru;
+               }
+            
+
+  
+            
+                  
+
+          
+            
+    
+      
+              
+        </style>
+    </head>
+    <body style >
+ 
+      <div class="whole">      
+          <div class="top">
+          
+          <div class="top-left">
+              <div class="top-l1">SALE</div>
+              <div class="top-l2">SHOP</div>
+              <div class="top-l3">OUR STORY</div>
+              <div class="top-l4">CUSTOMERS</div>
+              <div class="top-l5">BLOG</div>
+              </div>
+              
+        <div class="top-img-center">            
+        <img src=        alt=img>            
+            </div>
+            
+        <div class="top-right">
+            <div class="top-r1">FAQ</div>
+            <div class="top-r2">CONTACT</div>
+            <div class="top-r3">MY CART</div>
+            <div >              
+            <img class="cart-icon" src="https://images.rawpixel.com/image_350/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL2pvYjE0MjgtZWxlbWVudC0xMTdfMS5qcGc.jpg">                
+           </div>
+               <div class="profile">               
+           <img src=>               
+               </div>               
+        </div>
+        
+          </div>
+          
+          <div class="big-img">
+          <div >
+              <img class="big-img-img" src="https://www.bhg.com/thmb/7uIpZUz4TDpVHeazZ6ZzMCC-rc4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/english-ivy-plants-floating-shelf-394600cb-2892997e95684bcf91d57be17ecd9d4d.jpg">
+          </div>
+          <div class="pic-txt">
+                <div class="big-img-txt">IN TUNE WITH THE ARTS</div>
+            <div class="big-img-button"> 
+            <a href=# class="shop-button">SHOP NOW</a></div>           
+          </div>          
+        </div>         
+          
+          
+        <div class="dnd-img">
+            <img  class="big-img2 "src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y291Y2h8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=700&q=60">
+            <div class="cover-text">
+                <div class="cover-1">- NEW ARRIVALS</div>
+                <div class="cover-2">SUMMER 18 COLLECTIONS</div>
+                <div class="cover-button">                    
+             <button class="cover-butt">SHOP NOW</button></div>
+            </div>
+        </div>
+        
+          <div class="mul-img">
+              <div class="img1-grid">
+              <img class="img-1" src="https://images.unsplash.com/photo-1575501265016-ae78c708a09c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y291Y2h8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=700&q=60">
+              <button class="img1-text-button">CREATIVE-IDEAS</button>
+          </div>
+          <div class="img1-grid">
+              <img class="img-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6qUwZTTusXZZIzL3w-xn2UwHOaCByRJtIXQ&usqp=CAU">          
+       <button class="img1-text-button">HOME DECOR</button> 
+          </div>
+          <div class="img1-grid">
+              <img class="img-1"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2cVYVnFBHgluS_abcGR-s-iZ7n9y46fElnA&usqp=CAU">  
+     <button class="img1-text-button">THROW + PILLOWS</button>
+          </div>
+          <div class="img1-grid">
+              <img class="img-1"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSKycdRyD8UcifZT4dgZ4vBGvYOaGLiaK2_w&usqp=CAU">        
+          <button class="img1-text-button">QUILTS</button>
+          </div>
+    
+          </div>
+ 
+                         <div class="alone-txt-div">
+         <div class="alone-txt">MOST POPULAR PRODUCTS</div>
+     </div>   
+     
+     <div class="img7-grid">
+             
+             <div class="img-2grid">
+                 <img class="img-7"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-LUw7knx_SAnB6LkGLkuT4VsPA9DwaGD17w&usqp=CAU" >
+                   <div class="img7-prop">
+                         <div class="img7-name"> MICKEY PILLOW</div>
+                         <div class="img7-price"> $160</div>                    
+                   </div>       
+ <div class="img7-div-7button"> 
+ <button class="img-7button">ADD TO CART</button>     
+ </div>                        
+             </div>
+                 
+                
+        <div class="img-2grid">
+            <img class="img-7"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_SW_gpMwIDwfkAZDPZUgOYmkh4XO6ZJtdqA&usqp=CAU" >
+                <div class="img7-prop">
+                         <div class="img7-name"> MICKEY PILLOW</div>
+                         <div class="img7-price"> $160</div>                    
+                   </div>       
+ <div class="img7-div-7button"> 
+ <button class="img-7button">ADD TO CART</button>     
+ </div>                        
+        </div>
+        
+        <div class="img-2grid">
+               <img class="img-7"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpNxebmacdzQfGMp6u5-r6gSrTT8ia4G2WbA&usqp=CAU" >
+                <div class="img7-prop">
+                         <div class="img7-name"> MICKEY PILLOW</div>
+                         <div class="img7-price"> $160</div>                    
+                   </div>       
+ <div class="img7-div-7button"> 
+ <button class="img-7button">ADD TO CART</button>     
+ </div>                        
+         </div>
+         
+           <div class="img-2grid">
+            <img class="img-7"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQetk0qUmNsrBiSRVyYl3HJrzT-vsC7y_0kqw&usqp=CAU" >
+                <div class="img7-prop">
+                         <div class="img7-name"> MICKEY PILLOW</div>
+                         <div class="img7-price"> $160</div>                    
+                   </div>       
+ <div class="img7-div-7button"> 
+ <button class="img-7button">ADD TO CART</button>     
+ </div>                        
+        </div>
+        
+          <div class="img-2grid">
+            <img class="img-7"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBW85DLwyaX9MGCNFR7ufmFIxuB4Qpftt-qQ&usqp=CAU" >
+                <div class="img7-prop">
+                         <div class="img7-name"> STRAY BASKET SET</div>
+                         <div class="img7-price"> $300</div>                    
+                   </div>       
+ <div class="img7-div-7button"> 
+ <button class="img-7button">ADD TO CART</button>     
+ </div>                        
+        </div>
+        
+        <div class="img-2grid">
+            <img class="img-7"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFWf6HisCgpB1qbPO5nNwJxFbdPd94-pa_Qg&usqp=CAU" >
+                <div class="img7-prop">
+                         <div class="img7-name"> ANIME TRAY</div>
+                         <div class="img7-price"> $240</div>                    
+                   </div>       
+ <div class="img7-div-7button"> 
+ <button class="img-7button">ADD TO CART</button>     
+ </div>                        
+        </div>
+</div>
+
+            <div class="discover-button">
+                <button class="button-8">DISCOVER ALL</button>
+            </div> 
+        
+        <div class="alone-txt2">
+            COMMUNITY
+        </div>
+ 
+       <div class="alone-txt3">
+         SHOP OUR INSTAGRAM  
+      <span class="alone-txt3-link">
+            &#64;SOULANDLANE
+      </span>  
+       </div>
+       
+       
+    <div class="img-grid3-div">
+         <div class="img-grid3">
+   <div class="img-div">
+           <img class="img1-grid3"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU0PvGs9te7aFJEi6DE-1MNrYOc-osw1_KLw&usqp=CAU">
+   </div>
+   <div class="img-div">
+       <img class="img1-grid3"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_QZuxq5Ipqoh6F779s5ndXw1s0bYH3keFrx4D_ol7uc0d1xLUBWoLbqI&s=10">
+   </div>
+      <div class="img1-div" >
+               <img class="img1-grid3"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxnSaIuIis2Bic2mX5AKihhWszn1qW6dNBikEls-j9C8ZwI0mNCSm3D2QP&s=10">
+      </div>
+        <div class="img1-div" >
+               <img class="img1-grid3"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt7rNQuzmyI86NJg-NA1KaW95N8T2lv08VIw&usqp=CAU">
+      </div>
+        <div class="img1-div" >
+               <img class="img1-grid3"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3DjAU1i3SZPYjVU30tfgI8c7-QvwdSYiwAQv52DvcFHy7mE8Wkl5lAcY&s=10">
+      </div>
+        <div class="img1-div" >
+               <img class="img1-grid3"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYu1OZtFeMsQammsRbtTdzsyh0afsjacuXEg&usqp=CAU">
+      </div>
+        <div class="img1-div" >
+               <img class="img1-grid3"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGsZXESq2TydrPjwk-5r8ioMbomfY7bbNGJg&usqp=CAU">
+      </div>
+        <div class="img1-div" >
+               <img class="img1-grid3"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEP6DVPe3WcnC0tHnWxkLrvMRhBO-3buCjjxULB2Dn_hjDsEoSFuxTWv_Q&s=10">
+      </div>
+        <div class="img1-div" >
+               <img class="img1-grid3"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk3zTZrtjq5IVszJHcjcsIazsu5uGnShEJ1WTB5xmO-EAz7QkAl6sGXr0&s=10">
+      </div>
+        <div class="img1-div" >
+               <img class="img1-grid3"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS8dPUnHcT_NxlB_zIlglcs4So9nvrCCP0Uw&s">
+      </div>
+ </div>
+         </div>
+
+   
+   <div class="contact1-div">
+   
+       <div class="email-div">      
+        
+           <div class="sub-txt">
+               SUBSCRIBE TO GET NEWS AND UPDATES TO YOUR INBOX EVERY WEEK
+           </div>
+           <div class="email">
+               <input class="email-box" type="email" placeholder="EMAIL ADDRESS">
+               <button class="submit-box ">SIGN UP</button>               
+           </div>
+           
+       </div> 
+             
+       <div class="contact-total">
+         
+           <div class="contact-div">
+                            <div class="logo-div">
+            <div class="img-4">
+<img src="">
+            </div>
+                   <div class="img-4-txt">
+                        <div class="phone-txt">
+                           +1(224) 123-5678
+                     </div>
+             <div class="email2-txt">
+                  SUPPORT@ SOULANDLANE.COM
+              </div>
+                   </div>
+                    </div>                                    
+       </div>
+               <div class="contact-div1">    
+                    <div class="Home-at-bottom">
+                        <div class="bottom1-head">
+                            SOUL & LANE
+                        </div>
+                         <div class="bottom2">
+                             HOME
+                         </div>
+                         <div class="bottom2">
+                             SHOP
+                         </div>
+                         <div class="bottom2">
+                             OUR STORY
+                         </div>
+                          <div class="bottom2">
+                              CUSTOMERS
+                          </div>
+                          <div class="bottom2">
+                              BLOG
+                          </div>                          
+              </div>
+                    
+              <div class="Customer-service-div">
+                        <div class="bottom1-head">
+                            CUSTOMER SERVICE
+                        </div>
+                         <div class="bottom2">
+                             MY CART
+                         </div>
+                         <div class="bottom2">
+                             SHIPPING
+                         </div>
+                         <div class="bottom2">
+                             RETURN POLICY
+                         </div>
+                          <div class="bottom2">
+                               FAQ
+                          </div>
+                          <div class="bottom2">
+                              CONTACT
+                          </div>    
+             </div>  
+              
+         <div class="Social-div"> 
+                        <div class="bottom1-head">
+                            SOCIALS
+                        </div>
+                                <div class="social-icon">
+                           <div>
+                         <a href="#" class="fa fa-twitter"></a>
+                         </div>
+                         <div >
+                            <a href="#" class="fa fa-instagram"></a>
+                         </div>
+                          <div>
+                              <a href="#" class="fa fa-facebook"></a>
+                          </div>
+                          <div>
+                            <a href="#" class="fa fa-pinterest"></a>
+                                </div>        
+         </div>    
+               
+                </div>   
+          
+   </div>
+      </div>      
+    </body>
+</html>  </div>   
+          
+   </div>
+      </div>      
+    </body>
+</html>
