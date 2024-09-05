@@ -1,6 +1,7 @@
 .whole{ 
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     box-sizing: border-box;
 }    
     .top{
@@ -94,53 +95,58 @@
         width:50px;
     }
     
+    .img-section{
+     position: relative;
+     border:4px black inset ;
+    }
+
     .big-img{
     
     }
     .big-img-img{
-     margin-top:10px;
-        width:900px;
-        position:relative;
+     max-width: 100%;
+     height: auto;
     }
-    .pic-txt{
+
+    .pic-txt-button{
+        border:4px black inset ;
         position:absolute;
         width:400px;
-        top:400px; 
-        left:80px;
+        height: auto ;
+        top:200px; 
+        left:40px;
     }
-    .big-img-txt{
-    font-family:Raleway;
-    color:silver;
+    
+    .big-txt{
+       font-family:Raleway;
+       color:rgb(244, 243, 243);
         line-height:100px;
         font-size:80px;
     }
-    .big-img-button{
-        margin-top:50px;
+
+    .img-button{
+       margin-top:50px;
     }
+
     .shop-button{
     border:none;
     font-size:30px;
     text-decoration:none;
     margin-top:20px;
-    padding-top:20px;
-    padding-bottom:20px;
-    padding-left:35px;
-    padding-right:35px;
+    padding:20px 35px 20px 35px;
     color:white;
     cursor:pointer;
     font-family:Raleway;
     background-color:rgb(222,194,135);
         transition: 0.4s;
     }
-    .shop-button:hover{
-      padding-top:30px;
-    padding-bottom:30px;
-    padding-left:60px;
-    padding-right:60px;
-    font-size:40px;
-    animation:  shake 0.8s  ;
 
+    .shop-button:hover{
+    padding:30px 60px 30px 60px;
+    font-size:40px;
+    animation:  shake 0.8ss;
     }
+
     .dnd-img{
        margin-top:20px;
         margin-bottom:25px;
@@ -181,7 +187,8 @@
     }
     .cover-butt{
     font-family:Raleway;
-        backgroung-color:silver;
+        background-color:rgb(222,194,135);
+        color: whitew;
         padding-top:20px;
         padding-bottom:20px;
         padding-left:35px;
@@ -337,12 +344,12 @@
           opacity:0.6;
       }
       .alone-txt2{
-                  display:flex;
+         display:flex;
           justify-content:center;
-          align-item:center;
+          align-items:center;
           width:900px;
           margin-top:200px;
-          margin-botton:10px;
+          margin-bottom:10px;
           font-size:20px;
           font-family:Raleway;      
           color:rgb(210,30,30);
@@ -355,7 +362,7 @@
       .alone-txt3{
                      display:flex;
           justify-content:center;
-          align-item:center;
+          align-items:center;
           width:900px;
           margin-top:50px;
           font-size:25px;        
@@ -368,21 +375,23 @@
       .alone-txt3-link:hover{
           text-decoration:underline;
       }
+
       .img-grid3-div{
       margin-left:-70px; 
     width:1020px;
       }
+
       .img1-div{
           margin-bottom:0;
       }
+
       .img-grid3{
       display:grid;
-      width:1020px;
-      column-gap:0;
-      row-gap:0;
-     grid-template-columns:1fr 1fr 1fr 1fr 1fr ;
-      margin-top:70px;
-      margin-bottom:70px;
+      max-width:100%;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(5, 200px);
+      grid-template-rows: repeat(5, 100px);
+      border: 3px black inset;
       }
       
       .img1-grid3{
@@ -393,6 +402,7 @@
       .contact1-div{     
           width:900px;  
       }
+
       .email-div{
           display:flex;
           flex-direction:row;
@@ -400,13 +410,15 @@
           justify-content:space-between;
           padding-bottom:50px;
       }
+
       .sub-txt{
       width:300px;
-       font-family:Raleway;   
-       line-height:30px;
-       font-size:15px;
-       line-spacing:20px;
+      font-family:Raleway;   
+        line-height:30px;
+        font-size:15px;
+        line :20px;
       }
+
       .email-box{
       font-family:Raleway;   
       background-color:#ebebeb;
@@ -417,11 +429,13 @@
           padding-right:150px;
           border:none;
       }
+      
       .placeholder{
             font-family:Raleway;   
           font-size:15px;
           color:black;
       }
+
       .submit-box{
                font-family:Raleway;   
       background-color:#f2c446;
@@ -435,13 +449,14 @@
           border:none;
           margin-left:-5px;  
       }
+
       .contact-total{
           display:flex;
           flex-direction:row;
       width:900px;
-          margin-top:50px;
-        
+          margin-top:50px;  
       }
+
       .contact-div{   
       display:flex;  
             width:400px;     
@@ -453,25 +468,30 @@
           font-family:Raleway;
           margin-top:5px;
       }
+
       .email2-txt{
           font-family:Raleway;
           margin-top:5px;
       }
+
       .contact-div1{        
           display:flex;  
           justify-content:space-between;
             width:500px;            
    }
+
    .Home-at-bottom{
        display:flex;
        flex-direction:column;
       width:150px;
    }
+
    .Customer-service-div{
         display:flex;
        flex-direction:column;
        width:200px;
    }
+
         .Social-div{
         display:flex;
        flex-direction:column;
