@@ -63,6 +63,15 @@
     .top {
         max-width: 100%;
         padding: 0 10px;
+        flex-direction: column;
+        align-items: flex-start; 
+        height: auto;
+    }
+
+    .top-img-center, .top-right, .top-left {
+        flex-direction: column;
+        width: 100%; 
+        align-items: flex-start; 
     }
 
     .top-l1, .top-l2, .top-l3, .top-l4, .top-l5,
@@ -76,6 +85,7 @@
         width: 40px;
     }
 }
+
 
 
 .img-section {
