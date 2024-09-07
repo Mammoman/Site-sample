@@ -86,11 +86,11 @@
     }
 }
 
-
-
 .img-section {
     position: relative;
     border: 4px black inset;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .big-img-img {
@@ -100,12 +100,11 @@
 }
 
 .pic-txt-button {
-   
     position: absolute;
     max-width: 400px;
-    height: auto;
-    top: 200px;
-    left: 40px;
+    width: 90%; /* Ensure it's responsive */
+    top: 20%;
+    left: 5%;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -113,21 +112,21 @@
 .big-txt {
     font-family: Raleway;
     color: rgb(4, 4, 4);
-    line-height: 100px;
-    font-size: 80px;
+    line-height: 1.2; /* Adjust for better responsiveness */
+    font-size: 5vw; /* Use viewport width for scalability */
     word-wrap: break-word;
 }
 
 .img-button {
-    margin-top: 50px;
+    margin-top: 5%;
 }
 
 .shop-button {
     border: none;
-    font-size: 30px;
+    font-size: 2vw; /* Use viewport width for scalability */
     text-decoration: none;
     margin-top: 20px;
-    padding: 20px 35px;
+    padding: 1em 2em;
     color: white;
     cursor: pointer;
     font-family: Raleway;
@@ -136,81 +135,81 @@
 }
 
 .shop-button:hover {
-    padding: 25px 50px;
-    font-size: 35px;
+    padding: 1.2em 2.5em;
+    font-size: 2.2vw;
     animation: shake 0.8s;
 }
 
 @media (max-width: 1200px) {
     .pic-txt-button {
         max-width: 350px;
-        top: 180px;
-        left: 30px;
+        top: 25%;
+        left: 7%;
         padding: 15px;
     }
 
     .big-txt {
-        font-size: 60px;
-        line-height: 80px;
+        font-size: 4.5vw;
     }
 
     .shop-button {
-        font-size: 25px;
-        padding: 15px 30px;
+        font-size: 1.8vw;
+        padding: 0.8em 1.8em;
     }
 
     .shop-button:hover {
-        padding: 20px 40px;
-        font-size: 30px;
+        padding: 1em 2em;
+        font-size: 2vw;
     }
 }
 
 @media (max-width: 900px) {
     .pic-txt-button {
         max-width: 300px;
-        top: 160px;
-        left: 25px;
+        top: 30%;
+        left: 10%;
+        padding: 10px;
     }
 
     .big-txt {
-        font-size: 50px;
-        line-height: 70px;
+        font-size: 4vw;
     }
 
     .shop-button {
-        font-size: 22px;
-        padding: 15px 25px;
+        font-size: 1.6vw;
+        padding: 0.6em 1.6em;
     }
 
     .shop-button:hover {
-        padding: 20px 35px;
-        font-size: 28px;
+        padding: 0.8em 1.8em;
+        font-size: 1.8vw;
     }
 }
 
 @media (max-width: 600px) {
     .pic-txt-button {
         max-width: 250px;
-        top: 40px;
-        left: 15px;
-        padding: 10px;
+        top: 35%;
+        left: 15%;
+        padding: 8px;
     }
 
     .big-txt {
-        font-size: 20px;
-        line-height: 60px;
+        font-size: 6vw; /* Adjust to fit smaller screens */
+        line-height: 1.4;
     }
 
     .shop-button {
-        font-size: 10px;
-        padding: 10px 20px;
+        font-size: 1.4vw;
+        padding: 0.5em 1.4em;
     }
 
     .shop-button:hover {
-        padding: 15px 30px;
-        font-size: 25px;
+        padding: 0.7em 1.5em;
+        font-size: 1.5vw;
     }
 }
+
 
 
 .dnd-img {
