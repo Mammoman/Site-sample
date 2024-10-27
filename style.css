@@ -76,9 +76,8 @@
 
     .top-l1, .top-l2, .top-l3, .top-l4, .top-l5,
     .top-r1, .top-r2, .top-r3 {
-        font-size: 12px;
-        margin-left: 5px;
-        margin-right: 5px;
+        font-size: 14px;
+        margin: 5px 0;
     }
 
     .cart-icon {
@@ -113,7 +112,7 @@
     font-family: Raleway;
     color: rgb(4, 4, 4);
     line-height: 1.2; /* Adjust for better responsiveness */
-    font-size: 5vw; /* Use viewport width for scalability */
+    font-size: clamp(1.5rem, 5vw, 3rem);
     word-wrap: break-word;
 }
 
@@ -123,7 +122,7 @@
 
 .shop-button {
     border: none;
-    font-size: 2vw; /* Use viewport width for scalability */
+    font-size: clamp(1rem, 2vw, 1.5rem);
     text-decoration: none;
     margin-top: 20px;
     padding: 1em 2em;
@@ -188,20 +187,18 @@
 
 @media (max-width: 600px) {
     .pic-txt-button {
-        max-width: 250px;
-        top: 35%;
-        left: 15%;
-        padding: 8px;
+        max-width: 80%;
+        top: 10%;
+        left: 10%;
     }
 
     .big-txt {
-        font-size: 6vw; /* Adjust to fit smaller screens */
-        line-height: 1.4;
+        font-size: clamp(1.2rem, 4vw, 2rem);
     }
 
     .shop-button {
-        font-size: 1.4vw;
-        padding: 0.5em 1.4em;
+        font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+        padding: 0.5em 1em;
     }
 
     .shop-button:hover {
@@ -466,15 +463,18 @@
 
 .img7-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    width: max-content;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
 .img-2grid {
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
     height: auto;
     border: 1.5px dotted grey;
     padding: 10px;
@@ -622,8 +622,8 @@
 
 .img-grid3 {
     display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
     grid-template-rows: auto;
     justify-items: center;
     width: 100%;
@@ -845,5 +845,21 @@
 
     .contact-div1 {
         max-width: 500px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-total {
+        flex-direction: column;
+    }
+
+    .contact-div1 {
+        flex-direction: column;
+    }
+
+    .Home-at-bottom, .Customer-service-div, .Social-div {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 20px;
     }
 }
