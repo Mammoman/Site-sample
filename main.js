@@ -1,18 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     const productCards = document.querySelectorAll('.img-2grid');
+    let isMobile = window.innerWidth <= 768;
 
-    function handleFlip(card, isEnter) {
-        if (window.innerWidth <= 600) {
-            // For touch devices, toggle on click instead of hover
-            if (!isEnter) {
+    function handleFlip(card, action) {
+        if (isMobile) {
+            if (action === 'click') {
                 card.classList.toggle('flipped');
             }
         } else {
-            card.classList.toggle('flipped', isEnter);
+            card.classList.toggle('flipped', action === 'enter');
         }
     }
 
-    productCards.forEach(card => {
+    function setupCard(card) {
         const flipCardInner = document.createElement('div');
         flipCardInner.className = 'flip-card-inner';
 
@@ -30,20 +30,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const productName = card.querySelector('.img7-name').textContent;
         const productPrice = card.querySelector('.img7-price').textContent;
+        const productDescription = card.dataset.description || 'Product description goes here.';
+
         flipCardBack.innerHTML = `
             <h3>${productName}</h3>
             <p>${productPrice}</p>
-            <p>Product description goes here.</p>
+            <p>${productDescription}</p>
             <button class="img-7button">ADD TO CART</button>
         `;
 
-        card.addEventListener('mouseenter', () => handleFlip(card, true));
-        card.addEventListener('mouseleave', () => handleFlip(card, false));
-        card.addEventListener('click', () => handleFlip(card, false));
-    });
+        card.addEventListener('mouseenter', () => handleFlip(card, 'enter'));
+        card.addEventListener('mouseleave', () => handleFlip(card, 'leave'));
+        card.addEventListener('click', () => handleFlip(card, 'click'));
+        card.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            handleFlip(card, 'click');
+        }, { passive: false });
+    }
+
+    function updateCardBehavior() {
+        isMobile = window.innerWidth <= 768;
+        productCards.forEach(card => {
+            card.classList.remove('flipped');
+            if (isMobile) {
+                card.classList.add('touch-device');
+            } else {
+                card.classList.remove('touch-device');
+            }
+        });
+    }
+
+    productCards.forEach(setupCard);
+    updateCardBehavior();
 
     // Handle window resize
+    let resizeTimer;
     window.addEventListener('resize', () => {
-        productCards.forEach(card => card.classList.remove('flipped'));
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(updateCardBehavior, 250);
     });
 });
