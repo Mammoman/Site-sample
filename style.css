@@ -1,356 +1,434 @@
-    
+    *{
+  font-style: Raleway;
+}
+
+.big-div{
+  padding: 100px 100px;
+  background-color: steelblue;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.big-div p{
+  position: absolute;
+  font-size:20px;
+  color: white;
+  top:1px;
+  right:5px;
+}
+
+.slider-container .img1{
+  position: absolute ;
+  width:400px;
+  bottom:-2px;
+  left:-13px;
+}
+
+.slider-container .img2{
+  position: absolute;
+  bottom:2px;
+}
+
+.slider-container .img3{
+ 
+}
+
+.mini-div{
   
-
-@media (max-width: 900px) {
-    .mul-img {
-        grid-template-columns: 1fr;
-        column-gap: 0;
-        row-gap: 20px;
-    }
-
-    .img1-text-button {
-        top: 350px;
-        left: 20px;
-        font-size: 1.5rem;
-        
-    }
 }
 
-@media (max-width: 600px) {
-    .img-1 {
-        max-width: 100%;
-    }
-
-    .img1-text-button {
-        font-size: 1rem;
-       
-        top: 120px;
-        left: 10px;
-    }
+.mini-div mini{
+  
+  
 }
 
-.alone-txt-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+.mini-div .img-dock{
+  padding: 50px 25px;
+  background-color: aliceblue;
+  border-radius: 15px;
+  position: relative;
+  margin-bottom: 5px;
 }
 
-.alone-txt {
-    font-size: 2.5rem;
-    font-family: Raleway, sans-serif;
-    font-weight: 500;
-    margin: 20px 0;
+.img-dock:hover{
+  
 }
 
-.page-container {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    padding: 20px;
-}
-
-.scrollable-container {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.img7-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.img-2grid {
-    width: 100%;
-    max-width: 250px;
-    margin: 0 auto;
-    height: auto;
-    border: 1.5px dotted grey;
-    padding: 10px;
-    transition: 0.25s;
-    cursor: pointer;
-    position: relative;
-    box-sizing: border-box;
-}
-
-.img-7 {
-    width: 100%;
-    height: auto;
-}
-
-.img-2grid:hover {
-    box-shadow: 1px 1px 8px grey;
-}
-
-.img-2grid:hover .img7-name {
-    color: tomato;
-}
-
-.img-2grid:hover .img7-price {
-    color: green;
-}
-
-.img-2grid:hover .img-7button {
-    background-color: rgb(100, 100, 100);
-    box-shadow: 1px 1px 8px grey;
-}
-
-.img7-name,
-.img7-price {
-    font-family: Raleway, sans-serif;
-    margin: 10px 0;
-}
-
-.img-7button {
-    background: transparent;
-    border: none;
-    color: white;
-    font-family: Raleway, sans-serif;
-    font-size: 15px;
-    width: 100%;
-    padding: 10px;
-    cursor: pointer;
-    transition: 0.20s;
-}
-
-@media (max-width: 1200px) {
-    .img-2grid {
-        width: 200px;
-    }
-}
-
-@media (max-width: 900px) {
-    .img-2grid {
-        width: 150px;
-    }
-}
-
-@media (max-width: 600px) {
-    .img-2grid {
-        width: 80px;
-        height:auto;
-    }
+.scroller{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 
 
-.discover-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 900px;
-    margin-top: 100px;
-    margin-bottom: 10px;
-    height: 50px;
+.slider-container {
+  background-color: transparent;
+  position: absolute;
+  width: 80%;
+  max-width: 800px;
+  overflow: hidden;
+  border-radius: 10px;
+  width:450px;
+  bottom:-12px;
+  right:10px;
 }
 
-.button-8 {
-    border: none;
-    font-size: 20px;
-    color: white;
-    font-family: Raleway;
-    background-color: rgb(80, 80, 80);
-    padding: 15px 30px;
-    cursor: pointer;
-    transition: opacity 0.15s;
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
-.button-8:hover {
-    opacity: 0.6;
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
 }
 
-.alone-txt2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 900px;
-    margin-top: 200px;
-    margin-bottom: 10px;
-    font-size: 20px;
-    font-family: Raleway;
-    color: rgb(210, 30, 30);
-    transition: 0.5s;
+.slide img {
+  width: 100%;
+  border: none;
 }
 
-.alone-txt2:hover {
-    font-size: 25px;
-    color: tomato;
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 20;
 }
 
-.alone-txt3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 900px;
-    margin-top: 50px;
-    font-size: 25px;
-    font-family: Raleway;
+.prev-btn {
+  left: -10px;
 }
 
-.alone-txt3-link {
-    margin-left: 10px;
-    color: #fc8c03;
+.next-btn {
+  
+  right: -10px;
 }
 
-.alone-txt3-link:hover {
-    text-decoration: underline;
+
+.arrow-icon{
+  width: 25px;
 }
 
-@media (max-width: 900px) {
-    .img-2grid {
-        width: 150px;
-    }
+
+.arrow-icon:hover{
+  
 }
 
-.img-grid3-div {
-    width: 100vw;
-    padding: 20px;
-    box-sizing: border-box;
-    margin-left: 0;
+
+.mini-div img-sale{
+  background-color: sandybrown;
 }
 
-.img-grid3 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    grid-template-rows: auto;
-    justify-items: center;
-    width: 100%;
-    box-sizing: border-box;
+
+.mini-island{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top:100px;
+  margin-bottom: 100px;
 }
 
-.img1-grid3 {
-    width: 100%;  
-
-    max-width: 900px;
-    margin-top: 50px;
+.island{
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 120px;
+  background-color: floralwhite;
+  border-radius: 15px;
+  align-items: center;
 }
 
-.contact-div {   
-    display: flex;  
-    width: 100%;     
-    max-width: 400px;
-    align-items: flex-end;   
-    margin-bottom: 10px;   
+.island:hover{
+  background-color: antiquewhite;
 }
 
-.phone-txt, .email2-txt {
-    font-family: Raleway;
-    margin-top: 5px;
+.mini-island p{
+  font-size: 12px;
 }
 
-.contact-div1 {        
-    display: flex;  
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 500px;            
+.island-img{
+  width:70px;
+ 
 }
 
-.Home-at-bottom, .Customer-service-div, .Social-div {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 150px;
-    margin-bottom: 20px;
+
+.scroll{
+  display: block;
 }
 
-.Customer-service-div {
-    max-width: 200px;
+
+.season-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.bottom1-head {
-    font-size: 18px;
-    color: grey;
-    margin-bottom: 10px;
+
+.season-img{
+
 }
 
-.bottom2 {
-    color: black;
-    font-size: 15px;
-    font-family: Raleway;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    font-weight: 500;
-    cursor: pointer;
+.season-img{
+  width:230px;
+  height:200px;
+  border-radius:15px;
 }
 
-.bottom2:hover {
-    color: peru;
+.season-txt{
+  display: flex;
+  flex-direction: column;
+  margin-left:15px;
 }
 
-.social-icon {
-    display: flex;
-    flex-direction: row; 
-    margin-top: 20px;
+.season-txt .head{
+  font-size: 20px;
+  font-weight: bolder;
 }
 
-.fa { 
-    font-size: 35px;
-    width: 35px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    color: rgb(44, 48, 47);
+.season-txt .body{
+  font-size: 11px;
 }
 
-.fa:hover {
-    color: peru;
+.season-button{
+  padding: 5px 10px;
+  background-color: skyblue;
+  color:white;
+  border-radius: 15px;
+  font-size:12px;
+  border:none;
 }
 
-/* Media Queries for responsiveness */
-@media (min-width: 600px) {
-    .contact-total {
-        flex-direction: row; /* Flex row for larger screens */
-    }
 
-    .contact-div1 {
-        flex-direction: row;
-    }
 
-    .Home-at-bottom, .Customer-service-div, .Social-div {
-        width: 100%;
-        max-width: 150px;
-    }
 
-    .Customer-service-div {
-        max-width: 200px;
-    }
+
+.flexbox-holder{
+  display: flex;
+  flex-direction: column;
 }
 
-@media (min-width: 900px) {
-    .contact-total {
-        max-width: 900px;
-    }
-
-    .contact-div1 {
-        max-width: 500px;
-    }
+.flexbox1{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  margin-top:20px;
 }
 
-@media (max-width: 600px) {
-    .contact-total {
-        flex-direction: column;
-    }
-
-    .contact-div1 {
-        flex-direction: column;
-    }
-
-    .Home-at-bottom, .Customer-service-div, .Social-div {
-        width: 100%;
-        max-width: none;
-        margin-bottom: 20px;
-    }
+.holder-small{
+  display: flex;
+  flex-direction: column;
+  width:150px;
+  background-color: beige;
+  border-radius: 15px;
 }
+
+.small{
+    display:flex;
+  justify-content: center;
+}
+
+.holder-big{
+  display: flex;
+  flex-direction: column;
+  width:300px;
+  background-color: lightgrey;
+  border-radius: 15px;
+}
+
+.big{
+  display:flex;
+  justify-content: center;
+}
+
+.specials-img-1{
+  width:150px;
+  height:150px;
+ 
+}
+
+.specials-img-2{
+  width: 250px;
+  height:150px;
+ 
+}
+
+.specials-buttom{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin:0px;
+  margin-left:5px;
+  margin-right:5px;
+}
+
+.img-desc{
+  display:flex;
+  flex-direction: column;
+}
+
+.desc-name{
+  margin:0px;
+  font-size:13px;
+  font-family: sans-serif Raleway;
+}
+
+.desc-price{
+  margin:5px;
+  font-size:11px;
+}
+
+
+.heart-png{
+  width:20px;
+}
+
+
+
+.newsletter{
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.newsletter-head{
+  
+}
+
+
+.newsletter-and{
+  font-size:18px;
+  font-weight: bold;
+}
+
+.newsletter-grab{
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.newsletter-percent{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bolder;
+  color:red;
+}
+
+.newsletter-off{
+  font-size:22px;
+}
+
+
+
+.newsletter-form{
+  
+}
+
+.email-form{
+  padding-right:40px;
+  padding-left:10px;
+  padding-top:5px;
+  padding-bottom: 5px;
+  font-size: 12px;
+  border-radius: 15px;
+}
+
+.subscribe-button{
+  padding: 10px 20px;
+  background-color: black;
+  color:white;
+  border-radius: 25px;
+  font-size:15px;
+  border:none;
+}
+
+
+
+
+.footer{
+  display: flex;
+  flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer .brand{
+  
+}
+
+.in{
+  display:flex;
+  flex-direction: column;
+}
+
+
+.contact-button{
+  padding: 6px 8px;
+  background-color: black;
+  color:white;
+  border-radius: 25px;
+  font-size:13px;
+  border:none;
+}
+
+.footer-head{
+  font-size:20px;
+  font-weight: bolder;
+}
+
+.footer-txt{
+  font-size: 12px;
+  text-decoration: none;
+  color: lightslategray;
+}
+
+.links{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.link {
+
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.Contacts{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.contact-txt{
+  font-size: 12px;
+}
+
+
+.Customer-Service{
+  display: flex;
+  flex-direction: column
+}
+
+.customer-txt{
+   font-size: 14px;
+   font-weight: 600px;
+}
+
+
+
+.uhh-footer{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+
+
